@@ -1,0 +1,18 @@
+<!-- templates/admin_dashboard.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Active Administrators</h1>
+    <ul>
+        {% for admin in admins %}
+            <li>{{ admin.username }} - {{ admin.email }}</li>
+        {% empty %}
+            <li>No active administrators found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
